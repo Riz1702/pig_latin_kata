@@ -12,6 +12,16 @@
 
 def pig_latin(word)
 
+  vowel = ["a", "e" , "i", "o", "u"]
+  if vowel.include?(word[0])
+    word = word + "way"
+    puts word
+  else
+    word = word + word[0] + "ay"
+    word.slice!(0)
+  end
+  return word
+
 end
 
 ## Tests:
